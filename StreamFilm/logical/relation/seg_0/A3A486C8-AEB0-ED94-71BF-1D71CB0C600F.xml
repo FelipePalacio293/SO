@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Tenerv1" directorySegmentName="seg_0" id="A3A486C8-AEB0-ED94-71BF-1D71CB0C600F">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:52:46 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<sourcePk>418E8C87-0C4E-24C7-2111-1145728A4CB1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2F25F210-E4EA-B92A-3D5B-D5230F6F393A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>912E771B-C312-1440-492B-E3EC9FAA42C3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

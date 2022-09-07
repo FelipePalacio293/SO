@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0B9E92E-8425-3C62-A768-759B45F90283" name="TipoPelicula">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:36:44 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Tipo" id="05271068-0400-D7A1-BB92-7AC3BF2B99FE">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:36:55 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Titulo" id="1642DDF2-8576-529E-9A82-49C8996145DB">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:42:47 UTC</createdTime>
+<generatorID>B0055E7D-F2E4-F5A1-4636-5B9945AB8744</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<referedAttribute>89503BF5-03E0-8C1E-0F36-7854F320691F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F70B5155-2963-C1A3-5B7F-26EE0C8D08CE" name="TipoPelicula PK">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:37:25 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>05271068-0400-D7A1-BB92-7AC3BF2B99FE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

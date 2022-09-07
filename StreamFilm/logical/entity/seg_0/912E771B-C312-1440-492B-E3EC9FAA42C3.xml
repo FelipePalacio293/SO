@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="912E771B-C312-1440-492B-E3EC9FAA42C3" name="Premios">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:37:34 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nombre" id="C250E69C-E3A0-9376-B764-AB9B7BFB02A3">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:37:41 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tipo" id="2FB5992E-14E4-FC3E-DA3B-DA47BBB0CAE1">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:37:42 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre1" id="5A784802-0EAF-FC73-8508-511FE7CA75E7">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:51:02 UTC</createdTime>
+<generatorID>91C219E2-98B8-DB3A-9088-28465DE0889C</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>7B81A61B-6FF4-1562-87F9-D83FEE4BA564</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Premio" id="028A1B79-418E-2EF9-6DD7-98ABEA07A3FF">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:51:59 UTC</createdTime>
+<generatorID>CAABDC8A-C4E9-1714-DFC4-A074A3C9CB0E</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<referedAttribute>DA014523-3F3D-F023-10D5-66FD0A5DD590</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre2" id="F5E98BB0-66BB-5051-28D6-9C54CE29B8D3">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:52:46 UTC</createdTime>
+<generatorID>A3A486C8-AEB0-ED94-71BF-1D71CB0C600F</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6E29973D-7410-D554-8004-BAD103292167</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C4468285-D32E-BB07-A00B-58D38F8548AF" name="Premios PK">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:37:54 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C250E69C-E3A0-9376-B764-AB9B7BFB02A3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

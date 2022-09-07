@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2F25F210-E4EA-B92A-3D5B-D5230F6F393A" name="Personal">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:38:31 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nombre" id="6E29973D-7410-D554-8004-BAD103292167">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:38:38 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Origen" id="D52EF495-3A31-8ACB-1C87-E6F9CEB41AFB">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:40:16 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre1" id="9CC4EF4B-1C53-319A-D69D-E2BD96A13D2B">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:57:14 UTC</createdTime>
+<generatorID>FF330A28-C91B-214F-6F38-8B375D5D293E</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<referedAttribute>7B81A61B-6FF4-1562-87F9-D83FEE4BA564</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="418E8C87-0C4E-24C7-2111-1145728A4CB1" name="Personal PK">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:40:14 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6E29973D-7410-D554-8004-BAD103292167</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

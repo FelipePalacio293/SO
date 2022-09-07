@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FAD8F08-2402-B6E7-6EEE-D4BBE459088E" name="Produccion">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:34:50 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Titulo" id="89503BF5-03E0-8C1E-0F36-7854F320691F">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:35:01 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Sinopsis" id="5AA34D22-A004-8F48-DB2D-45918451C646">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:35:20 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10000</dataTypeSize>
+<ownDataTypeParameters>10000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FechaEstreno" id="A13F1084-3EC6-37FE-C57F-E75DA0150F45">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:35:23 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tipo" id="806F3C1B-34DC-CFED-B5FC-EABF9B5BD15F">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:43:21 UTC</createdTime>
+<generatorID>B0055E7D-F2E4-F5A1-4636-5B9945AB8744</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<referedAttribute>05271068-0400-D7A1-BB92-7AC3BF2B99FE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Genero" id="5300269A-5F07-26AB-F1CD-3DFC31909680">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:43:29 UTC</createdTime>
+<generatorID>9C834ED6-109A-F26B-2F68-833EBC65D42C</generatorID>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<referedAttribute>406F256A-2E45-9A68-71D9-8F3703C3A68E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="758EBC06-099D-B549-69F5-47BA9D3D8CD5" name="Produccion PK">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:35:58 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>89503BF5-03E0-8C1E-0F36-7854F320691F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

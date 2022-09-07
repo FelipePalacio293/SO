@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Serv1" directorySegmentName="seg_0" id="B0055E7D-F2E4-F5A1-4636-5B9945AB8744">
+<createdBy>PC01AQ</createdBy>
+<createdTime>2022-09-01 02:42:47 UTC</createdTime>
+<ownerDesignName>StreamFilm</ownerDesignName>
+<engineerTo>
+<item key="AC3F578D-44DF-E972-6D7F-22E84BFD3155" value="true"/>
+</engineerTo>
+<sourcePk>758EBC06-099D-B549-69F5-47BA9D3D8CD5</sourcePk>
+<targetPk>F70B5155-2963-C1A3-5B7F-26EE0C8D08CE</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7FAD8F08-2402-B6E7-6EEE-D4BBE459088E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>E0B9E92E-8425-3C62-A768-759B45F90283</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
