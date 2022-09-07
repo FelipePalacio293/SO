@@ -161,7 +161,6 @@ int main(void)
     char linesHistory[MAXLINE];
     char * piped[60];
     char * normal[60];
-    printf("a");
     while (shouldRun) {
         
         char* lines[60];

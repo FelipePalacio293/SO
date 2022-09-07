@@ -15,7 +15,11 @@ Diseñar un programa en C que sirva como interfaz de Shell para aceptar los coma
 Se crea y configura un makefile para ejecutar todos los archivos.
 
 ```sh
-$ make
+$ make shell
 ```
+Para ejecutar el archivo después de compilarlo se utiliza
 
+```sh
+$ ./shell
+```
 Enlace de Github: [Github](https://github.com/FelipePalacio293/SO/tree/master)
