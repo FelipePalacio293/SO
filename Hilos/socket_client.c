@@ -43,6 +43,7 @@ int main(int argc, char *argv[]) {
 	while(1)
 	{
 		printf("Opciones:\n1. Crear Contenedor\n2. Listar Contenedores\n3. Detener Contenedores\n4. Borrar contenedor\n");
+		
 		fgets(message, 1000, stdin);
 		message[strcspn(message, "\n")] = 0;
 		if (send(sock, message, strlen(message)+1, 0) < 0) {
@@ -51,6 +52,10 @@ int main(int argc, char *argv[]) {
 		} else {
 			puts("send ok");
 		}
+		
+
+	
+		
 		
 		if(strcmp(message, "1") == 0){
 			recibirMensajeServidor(sock);
@@ -93,40 +98,9 @@ int main(int argc, char *argv[]) {
 				puts("send ok");
 			}
 			recibirMensajeServidor(sock);
-		}
-
-		
-		printf("mensaje a enviar: %s\n", message);
-		
-
-
-		//Send some data
-		/*
-		if (send(sock, message, strlen(message)+1, 0) < 0) {
-			puts("Send failed");
-			return 1;
-		} else {
-			puts("send ok");
-		}
-
-		//Receive a reply from the server
-		memset(server_reply, 0, 2000);
-		if (recv(sock, server_reply, 2000, 0) < 0) {
-			puts("recv failed");
-			//break;
-		} else {
-			puts("recv ok");
-		}
-		
-		puts("Server reply :");
-		puts(server_reply);
-		*/
+		}	
 		
 	}
 	close(sock);
-	
-	
-	
-	
 	return 0;
 }

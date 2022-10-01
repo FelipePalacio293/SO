@@ -11,7 +11,7 @@
 
 typedef struct __myarg_t {
 	char name;
-	int id;
+	char id;
 } myarg_t;
 
 void *worker(void *arg){
@@ -19,34 +19,32 @@ void *worker(void *arg){
 	myarg_t *m = (myarg_t *) arg;
 	myarg_t *r = malloc(sizeof(myarg_t));
 	
-	// printf("%s %d\n", m->name, m->id);
 	pid_t pid = fork();
 	if(pid == 0){
-		if(m->id == 1){
-			execlp("docker", "docker", "run", "-di", "--name", &m->name, "ubuntu:latest", "/bin/bash", NULL);
+		if(strcmp(&m->id, "1") == 0){
+			execlp("docker", "docker", "run", "-di", "--name", &m->name, "ubuntu:latest", "/bin/bash", "auto_assign_name: false", NULL);
 		}
-		else if(m->id == 2){
+		else if(strcmp(&m->id, "2") == 0){
 			execlp("docker", "docker", "ps", NULL);
 		}
-		else if(m->id == 3){
+		else if(strcmp(&m->id, "3") == 0){
 			execlp("docker", "docker", "stop", &m->name, NULL);
 		}
-		else if(m->id == 4){
+		else if(strcmp(&m->id, "4") == 0){
 			execlp("docker", "docker", "rm", &m->name, NULL);
 		}
 	}
 	else{
-		wait(NULL);
-		if(m->id == 1){
+		if(strcmp(&m->id, "1") == 0){
 			strcpy(&r->name, "Created\n");
 		}
-		else if(m->id == 2){
+		else if(strcmp(&m->id, "2") == 0){
 			strcpy(&r->name, "Listed\n");
 		}
-		else if(m->id == 3){
+		else if(strcmp(&m->id, "3") == 0){
 			strcpy(&r->name, "Stopped\n");
 		}
-		else if(m->id == 4){
+		else if(strcmp(&m->id, "4") == 0){
 			strcpy(&r->name, "Deleted\n");
 		}
 	}
@@ -125,9 +123,8 @@ int main(int argc , char *argv[]) {
 					send(client_sock, server_message, strlen(server_message), 0);	
 					memset(client_message, 0, 2000);
 					if(recv(client_sock, client_message, 2000, 0) > 0) {
-						printf("received message: %s\n", client_message);
 						targ[contHilos].name = *client_message;
-						targ[contHilos].id = 1;
+						targ[contHilos].id = '1';
 						pthread_create(&tid[contHilos], &attr, worker, &targ[contHilos]); 	
 						pthread_join(tid[contHilos], (void **) &m);
 						strcpy(server_message, &m->name);
@@ -135,21 +132,22 @@ int main(int argc , char *argv[]) {
 					}
 				}
 				else if(strcmp(client_message, "2") == 0){
+					char server_message[] = "Lista";
 					targ[contHilos].name = *client_message;
-					targ[contHilos].id = 2;
+					targ[contHilos].id = '2';
 					pthread_create(&tid[contHilos], &attr, worker, &targ[contHilos]); 	
 					pthread_join(tid[contHilos], (void **) &m);
-
+					strcpy(server_message, &m->name);	
+					send(client_sock, server_message, strlen(server_message), 0);	
 					// send(client_sock, server_message, strlen(server_message), 0);
 				}
 				else if(strcmp(client_message, "3") == 0){
-					char server_message[] = "Ingrese el nombrbe de la imagen a detener";
+					char server_message[] = "Ingrese el nombre de la imagen a detener";
 					send(client_sock, server_message, strlen(server_message), 0);
 					memset(client_message, 0, 2000);
 					if(recv(client_sock, client_message, 2000, 0) > 0) {
-						printf("received message: %s\n", client_message);
 						targ[contHilos].name = *client_message;
-						targ[contHilos].id = 3;
+						targ[contHilos].id = '3';
 						pthread_create(&tid[contHilos], &attr, worker, &targ[contHilos]);
 						pthread_join(tid[contHilos], (void **) &m); 
 						strcpy(server_message, &m->name);	
@@ -163,7 +161,7 @@ int main(int argc , char *argv[]) {
 					if(recv(client_sock, client_message, 2000, 0) > 0) {
 						printf("received message: %s\n", client_message);
 						targ[contHilos].name = *client_message;
-						targ[contHilos].id = 4;
+						targ[contHilos].id = '4';
 						pthread_create(&tid[contHilos], &attr, worker, &targ[contHilos]); 	
 						pthread_join(tid[contHilos], (void **) &m);
 						strcpy(server_message, &m->name);
