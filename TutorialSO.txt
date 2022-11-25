@@ -1,4 +1,11 @@
-Crear NFS 
+Un NFS es un sistema de archivos de red, y es un protocolo de la capa de aplicaciôn del modelo OSI.
+Se utiliza comunmente de forma local, y permite que multiples computadoras accedan a archivos, carpetas o ficheros alojados de forma remota en un servidor.
+
+Se divide en cliente y servidor. Los clientes acceden de forma remota a lo que se tiene en el servidor, de tal forma que no es necesario bajarlo en cada cliente los archivos
+que se tienen en el servidor.
+
+
+Crear servidor NFS 
 
 mkdir nfs
 nano docker-compose.yml
@@ -21,17 +28,18 @@ services:
 sudo apt install docker-compose
 docker-compose up
 
-mkdir nfs-client
+Instalacion para poder usar mount
+
 sudo apt install nfs-common -y
 
-Para montar el servidor
+Para montar la carpeta compartida
 
 sudo mount -v -o vers=4,loud 192.168.10.30:/ /home/de/ISO-files/nfs
 
 Para saber la ip del contenedor 
 docker container inspect {ID DEL CONTENEDOR}
 
-Para entrar al contenedor 
+Para entrar al contenedor servidor
 sudo docker exec -it nfs /bin/bash
 
 Crear los clientes
